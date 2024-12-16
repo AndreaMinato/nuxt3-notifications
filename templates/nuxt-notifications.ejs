@@ -1,4 +1,4 @@
-declare module "@vue/runtime-core" {
+declare module 'vue' {
   export interface GlobalComponents {
     "<%= options.componentName %>": typeof import('@kyvg/vue3-notification')['Notifications']
   }
@@ -9,12 +9,6 @@ declare global {
 }
 
 declare module 'vue' {
-  interface ComponentCustomProperties {
-    readonly useNotification: typeof import('@kyvg/vue3-notification')['useNotification']
-  }
-}
-
-declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
     readonly useNotification: typeof import('@kyvg/vue3-notification')['useNotification']
   }
